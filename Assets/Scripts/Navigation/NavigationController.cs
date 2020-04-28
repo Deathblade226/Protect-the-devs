@@ -24,7 +24,7 @@ void Update() {
 
     GameObject objective = AIUtilities.GetNearestGameObject(gameObject, travelNav.TargetTag, xray:true);
 
-    if (CheckPath(travelNav.Target.transform)) { 
+    if (!CheckPath(travelNav.Target.transform)) { 
     
     attackNav.Target = "Defence"; attackNav.StartAttacking();
 

@@ -19,7 +19,7 @@ private void Update() {
 	if (Target != "" && Active) { 
 
 	var target = AIUtilities.GetNearestGameObject(gameObject, Target, Nc.Range, Nc.Fov, Nc.SeeThroughWalls);
-	
+
 	if (target != null) { 
 	
 	Attacking = ((transform.position - target.transform.position).magnitude <= attackRange && AttackTime <= 0);
