@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockadeAgro : MonoBehaviour {
+public class DefenceAgro : MonoBehaviour {
 
 [SerializeField] float agro = 1.0f;
 

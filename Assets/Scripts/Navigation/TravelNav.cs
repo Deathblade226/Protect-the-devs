@@ -10,13 +10,13 @@ public class TravelNav : MonoBehaviour {
 public bool Moving { get; set; }
 public string TargetTag { get => targetTag; set => targetTag = value; }
 public NavigationController Nc { get => nc; set => nc = value; }
-
+public GameObject Target { get => target; set => target = value; }
 private GameObject target = null;
 
-void Start() { target = AIUtilities.GetNearestGameObject(gameObject, TargetTag, xray:true); }
+void Start() { Target = AIUtilities.GetNearestGameObject(gameObject, TargetTag, xray:true); }
 public void StartTravel() {
     Moving = true; 
-    nc.Agent.SetDestination(target.transform.position);
+    nc.Agent.SetDestination(Target.transform.position);
 }
 
 }
