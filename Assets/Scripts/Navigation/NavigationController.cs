@@ -24,19 +24,9 @@ void Update() {
 
     GameObject objective = AIUtilities.GetNearestGameObject(gameObject, travelNav.TargetTag, xray:true);
 
-    if (!CheckPath(travelNav.Target.transform)) { 
-    
-    attackNav.Target = "Defence"; attackNav.StartAttacking();
-
-    } else if (attackNav.Target != "" && !attackNav.Active) { travelNav.Moving = false; wanderNav.StopWander(); attackNav.StartAttacking(); 
+    if (attackNav.Target != "" && !attackNav.Active) { travelNav.Moving = false; wanderNav.StopWander(); attackNav.StartAttacking(); 
     } else if (objective != null && !travelNav.Moving && !attackNav.Active) { wanderNav.StopWander(); travelNav.StartTravel();  
     } else if (!wanderNav.Active && !travelNav.Moving && !attackNav.Active) wanderNav.StartWander(); travelNav.Moving = false;
-
 }
-
-public bool CheckPath(Transform target) { 
-    Agent.CalculatePath(target.position, navPath);
-    if (navPath.status != NavMeshPathStatus.PathComplete) { return false; }
-return true;}
 
 }

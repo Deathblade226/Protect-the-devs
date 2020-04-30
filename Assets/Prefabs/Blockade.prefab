@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7229723273551935033}
   - component: {fileID: 7229723273551935032}
   - component: {fileID: 7229723273551935034}
+  - component: {fileID: 7137638815372366700}
+  - component: {fileID: 6453215007824603043}
   m_Layer: 0
   m_Name: Blockade
   m_TagString: Defence
@@ -61,7 +63,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a916fdcf92fb64da254d1eb949f272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agro: 2
+  agro: 3
+--- !u!65 &7137638815372366700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7229723273551935039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.325, y: 1.5, z: 1}
+  m_Center: {x: 0, y: 0.57, z: 0}
+--- !u!114 &6453215007824603043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7229723273551935039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30d5f096bbe5b9428417886d994e9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_health: 1
+  m_damage: {fileID: 0}
+  m_damageReduction: 0.1
 --- !u!1 &7229723274715410647
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +103,6 @@ GameObject:
   - component: {fileID: 7229723274715410640}
   - component: {fileID: 7229723274715410643}
   - component: {fileID: 7229723274715410642}
-  - component: {fileID: 7229723274715410641}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Defence
@@ -142,16 +171,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7229723274715410641
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229723274715410647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

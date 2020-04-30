@@ -6,6 +6,7 @@ public static class AIUtilities {
 
 public static GameObject GetNearestGameObject(GameObject source, string tagName, float radius = float.MaxValue, float angle = 180.0f, bool xray = false) { 
     GameObject nearestGO = null;
+    if (tagName != "") { 
 
     Collider[] colliders =  Physics.OverlapSphere(source.transform.position, radius);
 
@@ -26,11 +27,11 @@ public static GameObject GetNearestGameObject(GameObject source, string tagName,
     nearestDistance = distance;
     }
     }
-
+    }
 return nearestGO;}
 public static GameObject[] GetGameObjects(GameObject source, string tagName, float radius = float.MaxValue, float angle = 180.0f) { 
     List<GameObject> gameObjects = new List<GameObject>();
-
+    if (tagName != "") { 
     Collider[] colliders =  Physics.OverlapSphere(source.transform.position, radius);
 
     foreach(Collider collider in colliders) { 
@@ -40,6 +41,7 @@ public static GameObject[] GetGameObjects(GameObject source, string tagName, flo
 
     if (collider.gameObject != source && collider.gameObject.CompareTag(tagName) && angleDif <= angle) gameObjects.Add(collider.gameObject); 
         
+    }
     }
 
 return gameObjects.ToArray();}
