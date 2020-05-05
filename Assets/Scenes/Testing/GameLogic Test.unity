@@ -2007,6 +2007,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon - Ranged
       objectReference: {fileID: 0}
+    - target: {fileID: 7890010502170072635, guid: b92768e398425464597b8a3a741545a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7890010502170072638, guid: b92768e398425464597b8a3a741545a1,
         type: 3}
       propertyPath: m_LocalPosition.x
