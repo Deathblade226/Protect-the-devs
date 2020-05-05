@@ -2010,7 +2010,7 @@ PrefabInstance:
     - target: {fileID: 7890010502170072635, guid: b92768e398425464597b8a3a741545a1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7890010502170072638, guid: b92768e398425464597b8a3a741545a1,
         type: 3}
@@ -2518,40 +2518,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ac8b2689e53b3c49aa6c319b8d3dff1, type: 3}
---- !u!1 &1480213914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6880848253295296847, guid: c5511c23d1a3ef842b4c4f67f168154b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1669653183}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1480213915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480213914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a916fdcf92fb64da254d1eb949f272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agro: 2
---- !u!114 &1480213921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480213914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b30d5f096bbe5b9428417886d994e9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_health: 200
-  m_damage: {fileID: 0}
-  m_damageReduction: 0
 --- !u!4 &1530120156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7890010502170072638, guid: cc58a4a87bbfc264d955afb9d9c0f487,
@@ -2902,20 +2868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6880848253295296844, guid: c5511c23d1a3ef842b4c4f67f168154b,
-        type: 3}
-      propertyPath: Range
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 6880848253295296847, guid: c5511c23d1a3ef842b4c4f67f168154b,
         type: 3}
       propertyPath: m_Name
       value: Test Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 6880848253295296847, guid: c5511c23d1a3ef842b4c4f67f168154b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5511c23d1a3ef842b4c4f67f168154b, type: 3}
