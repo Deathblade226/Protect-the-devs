@@ -33,9 +33,9 @@ public class TowerProjectile : MonoBehaviour
         transform.position += (movementVector * speed) * Time.deltaTime;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Monster"))
+        if (other.gameObject.CompareTag("Monster"))
         {
             //Get monster component that contains health and change it depending on projectile damage
             //Delete projectile

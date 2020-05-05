@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 7890010502170072637}
   - component: {fileID: 7890010502170072632}
   - component: {fileID: 7890010502170072610}
+  - component: {fileID: 1623588077}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -235,6 +236,7 @@ MonoBehaviour:
   attackRange: 2
   nc: {fileID: 7890010502170072632}
   weapon: {fileID: 7890010503070866624}
+  lookForTowers: 0
 --- !u!114 &7890010502170072632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +273,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1623588077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890010502170072635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30d5f096bbe5b9428417886d994e9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_health: 100
+  m_damage: {fileID: 0}
+  m_damageReduction: 0
 --- !u!1 &7890010503070866626
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be0c5067b335db48a1bd2a1eea67c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
+  Type: Weapon
 --- !u!136 &7890010503070866631
 CapsuleCollider:
   m_ObjectHideFlags: 0

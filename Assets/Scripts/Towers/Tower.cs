@@ -27,13 +27,15 @@ public class Tower : MonoBehaviour {
 
     private void Update()
     {
+        GameObject go = AIUtilities.GetNearestGameObject(gameObject, "Monster", Range, xray:true);
+        target = go;
         if (target != null)
         {
-            Debug.Log(target.name);
+            //Debug.Log(target.name);
             projectile.GetComponent<TowerProjectile>().target = target;
             AimBarrel(target);
             Fire(target);
-            Debug.Log((target.transform.position - rangeFinder.transform.position).magnitude);
+            //Debug.Log((target.transform.position - rangeFinder.transform.position).magnitude);
             if (!CheckEnemyRange(target))
             {
                 target = null;
@@ -79,7 +81,9 @@ public class Tower : MonoBehaviour {
             if (timer <= 0)
             {
                 GameObject projectileClone = projectile;
-                Instantiate(projectileClone, barrelTransform);
+
+                GameObject go = Instantiate(projectileClone, barrelTransform.position, Quaternion.identity);
+                Destroy(go, 2);
                 timer = Rate;
             }
         }

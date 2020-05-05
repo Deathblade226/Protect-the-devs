@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5938671503296671866}
   - component: {fileID: 626903604925912628}
   - component: {fileID: 6475141855841746967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TowerProjectileBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379734771092920093}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -107,5 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 1
+  damage: 0
   target: {fileID: 0}
