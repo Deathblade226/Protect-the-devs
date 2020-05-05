@@ -8,6 +8,7 @@ public class AttackNav : MonoBehaviour {
 [SerializeField] float attackRange = 2.0f;
 [SerializeField] NavigationController nc = null;
 [SerializeField] Weapon weapon = null;
+[SerializeField] bool lookForTowers = false;
 
 public string Target { get; set; } = "";
 public bool Active { get; set; } = false;
@@ -18,10 +19,15 @@ private float AttackTime = 0;
 private bool attacking = false;
 
 private void Start() {
-	((MeleeWeapon)weapon).attack = this;		
+	weapon.attack = this;
 }
 private void Update() {
-	//Debug.Log(Target);
+	GameObject tower = null;
+	if (lookForTowers) tower = AIUtilities.GetNearestGameObject(gameObject, "Defence", attackRange);
+
+	if (tower != null) { Target = tower.tag; Active = true; }
+	else {Target = ""; Active = false; Nc.Agent.isStopped = false; }
+
 	if (Target != "" && Active) { 
 
 	var target = AIUtilities.GetNearestGameObject(gameObject, Target, Nc.Range, Nc.Fov, Nc.SeeThroughWalls);
@@ -31,7 +37,7 @@ private void Update() {
 	attacking = ((transform.position - target.transform.position).magnitude <= attackRange && AttackTime <= 0);
 	
 	if (attacking) {
-	((MeleeWeapon)weapon).Attack();
+	if (weapon.Type == "Melee") ((MeleeWeapon)weapon).Attack();
 	if (Nc.Animator != null) Nc.Animator.SetTrigger("Attack");  
 
 	transform.LookAt(target.transform);
