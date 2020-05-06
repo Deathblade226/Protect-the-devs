@@ -18,11 +18,21 @@ public class Tower : MonoBehaviour {
     [SerializeField] Transform barrelTransform = null;
     [SerializeField] GameObject projectile = null;
 
+
+
     private void Start()
     {
         timer = Rate;
-        projectile.GetComponent<TowerProjectile>().damage = Damage;
-        projectile.GetComponent<TowerProjectile>().speed = 5f;
+        if (projectile.GetComponent<TowerProjectile>())
+        {
+            projectile.GetComponent<TowerProjectile>().damage = Damage;
+            projectile.GetComponent<TowerProjectile>().speed = 5f;
+        }
+        else if (projectile.GetComponent<TowerRapidProjectile>())
+        {
+            projectile.GetComponent<TowerRapidProjectile>().damage = Damage;
+            projectile.GetComponent<TowerRapidProjectile>().speed = 10f;
+        }
     }
 
     private void Update()
@@ -31,8 +41,15 @@ public class Tower : MonoBehaviour {
         target = go;
         if (target != null)
         {
+            if (projectile.GetComponent<TowerProjectile>())
+            {
+                projectile.GetComponent<TowerProjectile>().target = target;
+            }
+            else if (projectile.GetComponent<TowerRapidProjectile>())
+            {
+                projectile.GetComponent<TowerRapidProjectile>().target = target;
+            }
             //Debug.Log(target.name);
-            projectile.GetComponent<TowerProjectile>().target = target;
             AimBarrel(target);
             Fire(target);
             //Debug.Log((target.transform.position - rangeFinder.transform.position).magnitude);
@@ -73,6 +90,7 @@ public class Tower : MonoBehaviour {
 
     private void Fire(GameObject target)
     {
+
         //Instantiate Projectile
         if (target != null)
         {
