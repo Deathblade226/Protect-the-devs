@@ -793,6 +793,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blockade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7229723273551935039, guid: e04471a7f62989244b14f19441b0406a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e04471a7f62989244b14f19441b0406a, type: 3}
 --- !u!1001 &402180959
@@ -2748,6 +2753,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 6880848253295296847, guid: c5511c23d1a3ef842b4c4f67f168154b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5511c23d1a3ef842b4c4f67f168154b, type: 3}
 --- !u!1 &1705732047
@@ -3221,6 +3231,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 203558056}
     m_Modifications:
+    - target: {fileID: 7890010502170072632, guid: cc58a4a87bbfc264d955afb9d9c0f487,
+        type: 3}
+      propertyPath: seeThroughWalls
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7890010502170072635, guid: cc58a4a87bbfc264d955afb9d9c0f487,
         type: 3}
       propertyPath: m_Name
@@ -3229,7 +3244,17 @@ PrefabInstance:
     - target: {fileID: 7890010502170072635, guid: cc58a4a87bbfc264d955afb9d9c0f487,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890010502170072637, guid: cc58a4a87bbfc264d955afb9d9c0f487,
+        type: 3}
+      propertyPath: lookForTowers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890010502170072637, guid: cc58a4a87bbfc264d955afb9d9c0f487,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7890010502170072638, guid: cc58a4a87bbfc264d955afb9d9c0f487,
         type: 3}
@@ -3429,6 +3454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blockade (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7229723273551935039, guid: e04471a7f62989244b14f19441b0406a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e04471a7f62989244b14f19441b0406a, type: 3}
 --- !u!1001 &1562688810358923420
@@ -3520,7 +3550,7 @@ PrefabInstance:
     - target: {fileID: 5337539953140288582, guid: 461c877bd279b23498c8a79c58d66ea1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5337539953140288582, guid: 461c877bd279b23498c8a79c58d66ea1,
         type: 3}

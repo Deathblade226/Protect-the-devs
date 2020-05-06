@@ -292,10 +292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCD: 2.5
-  attackRange: 2
+  attackRange: 1.2
   nc: {fileID: 7890010502170072632}
   weapon: {fileID: 7083255086336315466}
-  lookForTowers: 0
+  lookForTowers: 1
 --- !u!114 &7890010502170072632
 MonoBehaviour:
   m_ObjectHideFlags: 0
