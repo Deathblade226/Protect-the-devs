@@ -47,7 +47,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     private void PlayerMovement()
     {
-
+        //Debug.Log(m_groundMask);
         grounded = Physics.CheckSphere(m_groundCheck.position, m_groundDistance, m_groundMask);
 
 
