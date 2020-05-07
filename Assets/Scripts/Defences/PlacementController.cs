@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class PlacementController : MonoBehaviour {
 
-[SerializeField] GameObject player = null;
-[SerializeField] GameObject placeableObject = null;
-[SerializeField] private KeyCode spawnHotkey = KeyCode.Alpha1;
+[SerializeField] List<GameObject> placeableObjects = new List<GameObject>();
 
 private GameObject currentObject = null;
 private float rotation;
+private int currentTower = -1;
 
-    private void Update() {
+private void Update() {
     CreatePlacable();
 
     if (currentObject != null) {
@@ -47,13 +46,29 @@ private void RotatePlaceable() {
 }
 
 private void CreatePlacable() {
-    if (Input.GetKeyDown(spawnHotkey)) { 
-    if (currentObject == null) { 
-    currentObject = Instantiate(placeableObject);
+    for (int i = 0; i < placeableObjects.Count; i++) {
+
+    if (Input.GetKeyDown(KeyCode.Alpha0 + 1 + i)) { 
+
+    if (Pressed(i)) { 
+    Destroy(currentObject); 
+    currentTower = -1; 
+    
     } else { 
-    Destroy(currentObject);        
+    
+    if (currentObject != null) { 
+    Destroy(currentObject); 
+    }    
+    currentObject = Instantiate(placeableObjects[i]);
+    currentTower = i;
+    }
+    break;
     }
     }
+}
+
+private bool Pressed(int i) {
+return currentObject != null && currentTower == i;
 }
 
 }
