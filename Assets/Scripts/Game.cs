@@ -7,11 +7,9 @@ public class Game : MonoBehaviour {
 
 [SerializeField] NavMeshSurface mesh = null;
 
-public static Game game = new Game();
 public static bool Rebuild = false;
+public static int Curency { get; set; } = 0;
 
-void Start() {
-}
 void Update() {
     if (Input.GetKeyDown(KeyCode.G)) { UpdateNavMesh(); }
     if (Rebuild) UpdateNavMesh(); Rebuild = false;
