@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1208271611667355747}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileLauncherTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1208271611797297755}
   - component: {fileID: 1208271611797297754}
   - component: {fileID: 1208271611797297749}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 5744635610203938919}
   - component: {fileID: 5744635610203938909}
   - component: {fileID: 5143005173611321636}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rapid Tower
   m_TagString: Defence
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 1208271612852391608}
   - component: {fileID: 1208271612852391614}
   - component: {fileID: 1208271612852391609}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerRangeFinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 1208271613144255715}
   - component: {fileID: 1208271613144255714}
   - component: {fileID: 1208271613144255517}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BarrelTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlacementController : MonoBehaviour {
 
+[SerializeField] Camera playerCam = null;
+[SerializeField] Camera BuildCam = null;
 [SerializeField] List<GameObject> placeableObjects = new List<GameObject>();
 
 private GameObject currentObject = null;
@@ -13,6 +15,11 @@ private int currentTower = -1;
 
 private void Update() {
     CreatePlacable();
+    
+    playerCam.gameObject.SetActive(currentObject == null);
+    BuildCam.gameObject.SetActive(currentObject != null);
+
+    Cursor.lockState = (playerCam.gameObject.activeSelf) ? CursorLockMode.Locked : CursorLockMode.None;
 
     if (currentObject != null) {
     MovePlaceableToMouse();
@@ -30,7 +37,7 @@ private void SpawnObject() {
 private void RotatePlaceable() {
     if (Input.GetKey(KeyCode.E)) rotation += 0.1f;
     if (Input.GetKey(KeyCode.Q)) rotation -= 0.1f;
-    rotation = Input.mouseScrollDelta.y;
+    rotation += Input.mouseScrollDelta.y;
     currentObject.transform.Rotate(Vector3.up, rotation * 10f);
 }
 
