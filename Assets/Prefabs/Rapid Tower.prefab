@@ -254,11 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5281ba63562dd442a022a4eb2431c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
-  Range: 15
-  Rate: 0.15
+  Damage: 10
+  Range: 12.5
+  Rate: 0.25
   Fortitude: {fileID: 0}
-  Ammo: {fileID: 0}
+  Ammo: {fileID: 379734771092920093, guid: 9c16bd6e707f35a4887523eb04fc13e1, type: 3}
   rangeFinder: {fileID: 1208271612852391609}
   target: {fileID: 0}
   Barrels:
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30d5f096bbe5b9428417886d994e9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_health: 200
+  m_health: 325
   m_damage: {fileID: 0}
   m_damageReduction: 0
 --- !u!208 &5143005173611321636

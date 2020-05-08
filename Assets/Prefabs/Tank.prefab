@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be0c5067b335db48a1bd2a1eea67c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 30
   Type: Weapon
 --- !u!1 &4870565755097192134
 GameObject:
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30d5f096bbe5b9428417886d994e9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_health: 100
+  m_health: 200
   m_damage: {fileID: 0}
   m_damageReduction: 0.25
 --- !u!1001 &5970256137254142492

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084df68c741df6349a5d60660f3926b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 75
   Type: Weapon
   projectile: {fileID: 162032591189475313, guid: 2f4570dd6ef2d9b4b9d69a739441d2e2,
     type: 3}
