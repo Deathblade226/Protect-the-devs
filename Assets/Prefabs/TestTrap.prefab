@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3145446560338689101}
   - component: {fileID: 6379070381879275518}
   - component: {fileID: 8137271873847176099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TestTrap
-  m_TagString: Untagged
+  m_TagString: Defence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

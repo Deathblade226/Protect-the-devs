@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 523803685}
   m_Layer: 8
   m_Name: Cube (28)
-  m_TagString: Untagged
+  m_TagString: Defence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -11638,6 +11638,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8723464408503651864, guid: 31f57517dc1cd1a47954c1c24d139b7e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8723464408901635458, guid: 31f57517dc1cd1a47954c1c24d139b7e,
         type: 3}
       propertyPath: m_Name
@@ -11697,6 +11702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723464409441415240, guid: 31f57517dc1cd1a47954c1c24d139b7e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f57517dc1cd1a47954c1c24d139b7e, type: 3}

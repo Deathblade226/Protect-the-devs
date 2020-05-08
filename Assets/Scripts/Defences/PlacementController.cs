@@ -30,7 +30,8 @@ private void Update() {
     }
 }
 private void SpawnObject() {
-    if (Input.GetMouseButtonDown(0)) { 
+    if (Input.GetMouseButtonDown(0)) {
+    currentObject.layer = 0;
     currentObject = null;
     Game.Rebuild = true;
     }
@@ -41,7 +42,7 @@ private void RotatePlaceable() {
     currentObject.transform.Rotate(Vector3.up, rotation * 10f);
 }
 
-    private void MovePlaceableToMouse() {
+private void MovePlaceableToMouse() {
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     RaycastHit hitInfo;
     if (Physics.Raycast(ray, out hitInfo)) {

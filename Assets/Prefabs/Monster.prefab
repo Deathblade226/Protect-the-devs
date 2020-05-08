@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCD: 2.5
-  attackRange: 1.2
+  attackRange: 2
   nc: {fileID: 7890010502170072632}
   weapon: {fileID: 7890010503070866624}
   lookForTowers: 1
@@ -348,7 +348,7 @@ MonoBehaviour:
   animator: {fileID: 7890010502242135681}
   m_x: 1
   m_z: 1
-  seeThroughWalls: 0
+  seeThroughWalls: 1
   fov: 180
   range: 30
   attackNav: {fileID: 7890010502170072637}
