@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6880848252772509983}
   - component: {fileID: 6880848252772509982}
   - component: {fileID: 6880848252772510177}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BarrelTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6880848253013257028}
   - component: {fileID: 6880848253013257026}
   - component: {fileID: 6880848253013257029}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerRangeFinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1480213915}
   - component: {fileID: 1480213921}
   - component: {fileID: 641363077213781208}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Basic Tower
   m_TagString: Defence
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a916fdcf92fb64da254d1eb949f272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agro: 2
+  agro: 1.5
 --- !u!114 &1480213921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   m_health: 200
   m_damage: {fileID: 0}
   m_damageReduction: 0
+  score: 0
 --- !u!208 &641363077213781208
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -349,7 +350,7 @@ GameObject:
   - component: {fileID: 6880848254102437799}
   - component: {fileID: 6880848254102437798}
   - component: {fileID: 6880848254102437801}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6880848254517820831}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileLauncherTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

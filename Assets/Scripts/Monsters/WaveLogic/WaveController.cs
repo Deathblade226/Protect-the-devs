@@ -7,6 +7,7 @@ public class WaveController : MonoBehaviour {
 [SerializeField] List<Wave> waves = new List<Wave>();
 [SerializeField] float waveCD = 0;
 [SerializeField] bool PlayerRan = false;
+
 private float waveTimer = 0;
 private int waveNumber = 0;
 public int WaveNumber { get => waveNumber; }
@@ -18,11 +19,11 @@ private void Start() {
 
 private void Update() {
     GameObject[] spawned = AIUtilities.GetGameObjects(gameObject, "Monster");
-    if (GameRunning && !PlayerRan) { 
+    if (GameRunning && !PlayerRan) {
     if (spawned.Length == 0) { 
     if (waveTimer <= 0) { StartWave(); } else { waveTimer -= Time.deltaTime; }            
     }
-    } else if (spawned.Length == 0 && PlayerRan){ GameRunning = false; }
+    } else if (spawned.Length == 0 && PlayerRan && GameRunning){ GameRunning = false; }
 
     if (Input.GetKeyDown(KeyCode.H) && !GameRunning) { 
     GameRunning = true;

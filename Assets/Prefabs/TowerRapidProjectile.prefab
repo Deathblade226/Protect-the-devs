@@ -110,7 +110,7 @@ MonoBehaviour:
   speed: 10
   damage: 10
   target: {fileID: 0}
-  lifeTimer: 0
+  lifeTimer: 1
 --- !u!54 &-7565278225006717902
 Rigidbody:
   m_ObjectHideFlags: 0

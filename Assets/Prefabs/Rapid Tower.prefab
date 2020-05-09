@@ -258,7 +258,7 @@ MonoBehaviour:
   Range: 12.5
   Rate: 0.25
   Fortitude: {fileID: 0}
-  Ammo: {fileID: 379734771092920093, guid: 9c16bd6e707f35a4887523eb04fc13e1, type: 3}
+  Ammo: {fileID: 0}
   rangeFinder: {fileID: 1208271612852391609}
   target: {fileID: 0}
   Barrels:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a916fdcf92fb64da254d1eb949f272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agro: 2
+  agro: 1.5
 --- !u!114 &5744635610203938909
 MonoBehaviour:
   m_ObjectHideFlags: 0

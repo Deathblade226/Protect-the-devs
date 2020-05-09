@@ -442,6 +442,7 @@ MonoBehaviour:
   m_health: 200
   m_damage: {fileID: 0}
   m_damageReduction: 0.25
+  score: 100
 --- !u!1001 &5970256137254142492
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,9 +13,12 @@ public class Game : MonoBehaviour {
 [SerializeField] GameObject panel = null;
 [SerializeField] GameObject pauseMenu = null;
 
+public static Game game;
 private bool paused = false;
 public static bool Rebuild = false;
 public int Currency { get => currency; set => currency = value; }
+
+private void Start() { game = this; }
 
 void Update() {
     currencyDisplay.text = $"Currency: {currency}";
