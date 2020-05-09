@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 5744635610203938919}
   - component: {fileID: 5744635610203938909}
   - component: {fileID: 5143005173611321636}
+  - component: {fileID: -3541362832533339259}
   m_Layer: 2
   m_Name: Rapid Tower
   m_TagString: Defence
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_health: 325
   m_damage: {fileID: 0}
   m_damageReduction: 0
+  score: 0
 --- !u!208 &5143005173611321636
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -310,6 +312,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &-3541362832533339259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208271612603868339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693184f6711d19c4bbb197c0e1a46007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildCost: 50
 --- !u!1 &1208271612852391611
 GameObject:
   m_ObjectHideFlags: 0

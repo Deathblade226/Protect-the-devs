@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 1480213915}
   - component: {fileID: 1480213921}
   - component: {fileID: 641363077213781208}
+  - component: {fileID: -6131038220119492760}
   m_Layer: 2
   m_Name: Basic Tower
   m_TagString: Defence
@@ -338,6 +339,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &-6131038220119492760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880848253295296847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693184f6711d19c4bbb197c0e1a46007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildCost: 75
 --- !u!1 &6880848254102437803
 GameObject:
   m_ObjectHideFlags: 0

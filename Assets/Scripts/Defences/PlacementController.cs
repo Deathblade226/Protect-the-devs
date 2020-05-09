@@ -16,7 +16,7 @@ private int currentTower = -1;
 private void Update() {
     CreatePlacable();
 
-    Cursor.lockState = (BuildCam.gameObject.activeSelf) ? CursorLockMode.None : CursorLockMode.Locked;
+    if (!Game.game.Paused) Cursor.lockState = (BuildCam.gameObject.activeSelf) ? CursorLockMode.None : CursorLockMode.Locked;
 
     if (Input.GetKeyDown(KeyCode.T)) { 
     BuildCam.gameObject.SetActive(PlayerCam.gameObject.activeSelf == true);
@@ -30,7 +30,8 @@ private void Update() {
     }
 }
 private void SpawnObject() {
-    if (Input.GetMouseButtonDown(0)) {
+    if (Input.GetMouseButtonDown(0) && Game.game.Currency >= currentObject.GetComponent<Cost>().BuildCost && Game.game.Currency - currentObject.GetComponent<Cost>().BuildCost >= 0) {
+    Game.game.Currency -= currentObject.GetComponent<Cost>().BuildCost;
     currentObject.layer = 0;
     currentObject = null;
     Game.Rebuild = true;
