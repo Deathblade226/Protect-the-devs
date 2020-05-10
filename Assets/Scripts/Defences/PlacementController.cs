@@ -32,7 +32,7 @@ private void Update() {
 private void SpawnObject() {
     if (Input.GetMouseButtonDown(0) && Game.game.Currency >= currentObject.GetComponent<DefenseTD>().Cost && Game.game.Currency - currentObject.GetComponent<DefenseTD>().Cost >= 0) {
     Game.game.Currency -= currentObject.GetComponent<DefenseTD>().Cost;
-    Tower tower = currentObject.GetComponent<Tower>();
+    DefenseTD tower = currentObject.GetComponent<DefenseTD>();
     if (tower != null) tower.Placed = true;
     currentObject.layer = 0;
     currentObject = null;

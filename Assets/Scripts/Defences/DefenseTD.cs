@@ -20,4 +20,5 @@ public float Damage { get => damage; set => damage = value; }
 public DefenceAgro Agro { get => agro; set => agro = value; }
 public string EnemyTag { get => enemyTag; set => enemyTag = value; }
 public float WaitTime { get; set; }
+public bool Placed { get; set; } = false;
 }

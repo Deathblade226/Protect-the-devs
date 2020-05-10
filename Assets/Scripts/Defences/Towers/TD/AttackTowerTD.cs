@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AttackTowerTD : TowerTD {
 
-private void Update() { 
+private void Update() {
+    if (Placed) { 
     GameObject enemy = AIUtilities.GetNearestGameObject(VisionCheck, EnemyTag, Range);
     
     if (enemy != null) { 
@@ -22,6 +23,7 @@ private void Update() {
 
     } else { WaitTime -= Time.deltaTime; }
 
+    }
     }
 }
 

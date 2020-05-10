@@ -11,18 +11,18 @@ public class NavigationController : Navigation {
 public AttackNav AttackNav { get => attackNav; set => attackNav = value; }
 
 private NavMeshPath navPath ;
+private GameObject objective = null;
 
 void Start() {
     attackNav.Nc = this;
     wanderNav.Nc = this;
     travelNav.Nc = this;
     navPath = new NavMeshPath();
+    objective = AIUtilities.GetNearestGameObject(gameObject, travelNav.TargetTag, xray:true);
 }
 
-void Update() {
+void Update() { //I need to refine this to increase preformance
     if (Animator != null) Animator.SetFloat("Speed", Agent.velocity.magnitude);
-
-    GameObject objective = AIUtilities.GetNearestGameObject(gameObject, travelNav.TargetTag, xray:true);
 
     if (attackNav.Target != "" && !attackNav.Active) { travelNav.Moving = false; wanderNav.StopWander(); attackNav.StartAttacking(); 
     } else if (objective != null && !travelNav.Moving && !attackNav.Active) { wanderNav.StopWander(); travelNav.StartTravel();  
