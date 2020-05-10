@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 626903604925912628}
   - component: {fileID: 6475141855841746967}
   m_Layer: 8
-  m_Name: TowerProjectileBasic
+  m_Name: TowerProjectileSniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c124d00d32f586942b234e085d89e577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  damage: 10
+  speed: 20
+  damage: 50
   target: {fileID: 0}
   lifeTimer: 2

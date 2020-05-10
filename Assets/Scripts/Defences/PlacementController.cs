@@ -32,6 +32,8 @@ private void Update() {
 private void SpawnObject() {
     if (Input.GetMouseButtonDown(0) && Game.game.Currency >= currentObject.GetComponent<Cost>().BuildCost && Game.game.Currency - currentObject.GetComponent<Cost>().BuildCost >= 0) {
     Game.game.Currency -= currentObject.GetComponent<Cost>().BuildCost;
+    Tower tower = currentObject.GetComponent<Tower>();
+    if (tower != null) tower.Placed = true;
     currentObject.layer = 0;
     currentObject = null;
     Game.Rebuild = true;

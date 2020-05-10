@@ -18,7 +18,7 @@ public class Tower : MonoBehaviour {
     [SerializeField] Transform barrelTransform = null;
     [SerializeField] GameObject projectile = null;
 
-
+    public bool Placed { get; set; } = false;
 
     private void Start()
     {
@@ -39,7 +39,7 @@ public class Tower : MonoBehaviour {
     {
         GameObject go = AIUtilities.GetNearestGameObject(gameObject, "Monster", Range, xray:true);
         target = go;
-        if (target != null)
+        if (target != null && Placed)
         {
             if (projectile.GetComponent<TowerProjectile>())
             {
