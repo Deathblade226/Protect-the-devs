@@ -7,12 +7,11 @@ public class DefenceAgro : MonoBehaviour {
 [SerializeField] float agro = 1.0f;
 
 private bool destroyed = false;
-
-private void Start() { }
+public float Agro { get => agro; set => agro = value; }
 
 private void Update() {
     if (!destroyed) { 
-    GameObject[] enemies = AIUtilities.GetGameObjects(gameObject, "Monster", agro);
+    GameObject[] enemies = AIUtilities.GetGameObjects(gameObject, "Monster", Agro);
     foreach(GameObject enemy in enemies) { 
     //Debug.Log(enemy);
     NavigationController nc = enemy.GetComponent<NavigationController>();
@@ -21,7 +20,7 @@ private void Update() {
 }
 
 private void OnDestroy() {
-    GameObject[] enemies = AIUtilities.GetGameObjects(gameObject, "Monster", agro);
+    GameObject[] enemies = AIUtilities.GetGameObjects(gameObject, "Monster", Agro);
     destroyed = true;
     foreach(GameObject enemy in enemies) { 
     NavigationController nc = enemy.GetComponent<NavigationController>();
@@ -33,7 +32,7 @@ private void OnDestroy() {
 
 private void OnDrawGizmosSelected() {
     Gizmos.color = Color.red;
-    Gizmos.DrawWireSphere(transform.position, agro);
+    Gizmos.DrawWireSphere(transform.position, Agro);
 }
 
 }

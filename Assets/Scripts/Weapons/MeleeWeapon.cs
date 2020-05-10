@@ -12,8 +12,9 @@ private void Awake() { Type = "Melee"; }
 private void Update() {
     GameObject go = AIUtilities.GetNearestGameObject(gameObject, attack.Target, 0, attack.Nc.Fov, attack.Nc.SeeThroughWalls);
     if (go != null && !hit) { 
-    hit = true; 
+    hit = true;
     go.GetComponent<Damagable>().ApplyDamage(Damage);    
+    if (DestroyOnHit) Destroy(gameObject);
     }   
 }
 
