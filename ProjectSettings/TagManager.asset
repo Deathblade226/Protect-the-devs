@@ -8,6 +8,7 @@ TagManager:
   - Blockade
   - Monster
   - Defence
+  - Trap
   layers:
   - Default
   - TransparentFX

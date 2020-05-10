@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+[SerializeField] float damage = 0f;
+[SerializeField] string enemyTag = "";
+[SerializeField] float LifeTime = 1.0f;
+public float WeaponDamage { get => damage; set => damage = value; }
+public string EnemyTag { get => enemyTag; set => enemyTag = value; }
+
+private void Start() { Destroy(gameObject, LifeTime); }
+
+private void OnTriggerEnter(Collider other) {
+    if (other.tag == EnemyTag) { 
+    
+    Damagable health = other.GetComponent<Damagable>();
+    if (health != null) { 
+    health.ApplyDamage(WeaponDamage);
     }
+    Destroy(gameObject);
+    }       
+}
+
 }

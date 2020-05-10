@@ -13,7 +13,8 @@ private void Update() {
     GameObject go = AIUtilities.GetNearestGameObject(gameObject, attack.Target, 0, attack.Nc.Fov, attack.Nc.SeeThroughWalls);
     if (go != null && !hit) { 
     hit = true;
-    go.GetComponent<Damagable>().ApplyDamage(Damage);    
+    Damagable health = go.GetComponent<Damagable>();    
+    if (health != null) health.ApplyDamage(Damage);
     if (DestroyOnHit) Destroy(gameObject);
     }   
 }

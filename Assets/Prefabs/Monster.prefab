@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCD: 2.5
-  attackRange: 2
+  attackRange: 1.2
   nc: {fileID: 7890010502170072632}
   weapon: {fileID: 7890010503070866624}
   lookForTowers: 1
@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  destroyOnHit: 0
   Type: Weapon
 --- !u!136 &7890010503070866631
 CapsuleCollider:

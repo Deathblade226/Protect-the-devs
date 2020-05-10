@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7137638815372366700}
   - component: {fileID: 6453215007824603043}
   - component: {fileID: 2164338238060665610}
+  - component: {fileID: 1210420011230241468}
   m_Layer: 2
-  m_Name: Blockade
+  m_Name: Blockade TD
   m_TagString: Defence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a916fdcf92fb64da254d1eb949f272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agro: 1.5
+  agro: 1.75
 --- !u!65 &7137638815372366700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107,6 +108,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildCost: 20
+--- !u!114 &1210420011230241468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7229723273551935039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d10ad2f17fc7a2429bad79be7192408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fortitude: {fileID: 6453215007824603043}
+  range: 1.75
+  rate: 0
+  cost: 20
+  damage: 0
+  agro: {fileID: 7229723273551935034}
+  enemyTag: Monster
 --- !u!1 &7229723274715410647
 GameObject:
   m_ObjectHideFlags: 0

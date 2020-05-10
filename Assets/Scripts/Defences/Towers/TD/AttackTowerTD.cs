@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperTowerTD : TowerTD {
+public class AttackTowerTD : TowerTD {
 
 private void Update() { 
     GameObject enemy = AIUtilities.GetNearestGameObject(VisionCheck, EnemyTag, Range);
@@ -12,9 +12,11 @@ private void Update() {
     if (WaitTime <= 0) { 
     
     GameObject shot = Instantiate(Projectile, Barrel.transform.position + Barrel.transform.forward, Barrel.transform.rotation);
-    shot.GetComponent<MeleeWeapon>().Damage = Damage;
+    Projectile projectile = shot.GetComponent<Projectile>();
+    projectile.WeaponDamage = Damage;
+    projectile.EnemyTag = EnemyTag;
     Rigidbody rb = shot.GetComponent<Rigidbody>();
-    rb.AddForce(Barrel.transform.forward * ShotSpeed);
+    rb.AddForce(Barrel.transform.forward * (ShotSpeed * 10));
     rb.useGravity = false;
     WaitTime = Rate;
 

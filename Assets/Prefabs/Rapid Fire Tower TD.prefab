@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7688007057010961750}
   - component: {fileID: 6373580161074552400}
   m_Layer: 2
-  m_Name: Sniper Tower TD
+  m_Name: Rapid Fire Tower TD
   m_TagString: Defence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,16 +301,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fortitude: {fileID: 5744635610203938909}
-  range: 50
-  rate: 1
-  cost: 100
-  damage: 50
+  range: 25
+  rate: 0.25
+  cost: 75
+  damage: 10
   agro: {fileID: 5744635610203938919}
   enemyTag: Monster
   projectile: {fileID: 379734771092920093, guid: 93e618b24dbf71945b67355f36da2f33,
     type: 3}
   barrel: {fileID: 1208271611667355746}
-  shotSpeed: 100
+  shotSpeed: 50
   visionCheck: {fileID: 7573095257635262479}
 --- !u!114 &6373580161074552400
 MonoBehaviour:
