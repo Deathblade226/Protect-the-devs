@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fortitude: {fileID: 5744635610203938909}
-  range: 25
+  range: 20
   rate: 0.25
   cost: 75
   damage: 10
