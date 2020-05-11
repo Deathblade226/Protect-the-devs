@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SplashProjectile : Projectile
 {
-    public float damage = 1.0f;
     public float radius = 10f;
 
     Vector3 direction;
@@ -22,7 +21,7 @@ public class SplashProjectile : Projectile
             {
                 if (collider.gameObject.CompareTag("Monster"))
                 {
-                    collider.GetComponent<Damagable>().ApplyDamage(damage);
+                    collider.GetComponent<Damagable>().ApplyDamage(WeaponDamage);
                 }
             }
 
