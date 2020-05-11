@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ThirdPersonCameraController : MonoBehaviour
 {
-    [SerializeField] [Range(50, 300)] public float m_mouseSensitivity = 100.0f;
+    [SerializeField] [Range(50, 300)] float m_mouseSensitivity = 100.0f;
     [SerializeField] public Transform target, player = null;
-    [SerializeField] float m_distance = 5.0f;
+    [SerializeField] [Range(0, 5)] float m_distance = 5.0f;
 
     float mouseX;
     float mouseY;
@@ -30,21 +30,26 @@ public class ThirdPersonCameraController : MonoBehaviour
         //yaw = Mathf.Clamp(yaw, -70.0f, 70.0f);
         Quaternion qyaw = Quaternion.AngleAxis(yaw, Vector3.up);
 
-
+        if (Input.GetKeyDown(KeyCode.Equals) && m_distance < 5.0f)
+        {
+            m_distance++;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Minus) && m_distance > 0.0f)
+        {
+            m_distance--;
+        }
 
         pitch += mouseY;
         pitch = Mathf.Clamp(pitch, -75.0f, 80.0f);
-        Quaternion qpitch = Quaternion.AngleAxis(pitch, Vector3.right);
+        Quaternion qpitch = Quaternion.AngleAxis(-pitch, Vector3.right);
         
         
         
         target.rotation = qyaw * qpitch;
         player.rotation = qyaw;
         //target.Rotate(Vector3.right, mouseY);
-    }
-
-    private void LateUpdate()
-    {
+        
         Quaternion rotation = target.rotation * Quaternion.AngleAxis(mouseX, Vector3.up) * Quaternion.AngleAxis(mouseY, Vector3.right);
         Vector3 newPos = target.position + rotation * new Vector3(0, 0, -m_distance);
 

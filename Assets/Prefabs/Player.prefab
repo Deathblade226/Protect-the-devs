@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8723464408503651867}
   - component: {fileID: 8723464408503651866}
   - component: {fileID: 8723464408503651865}
-  - component: {fileID: 8723464408503651940}
+  - component: {fileID: 4351658218009096355}
   m_Layer: 11
   m_Name: PlayCamera
   m_TagString: MainCamera
@@ -197,7 +197,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8723464408503651864}
   m_Enabled: 1
---- !u!114 &8723464408503651940
+--- !u!114 &4351658218009096355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,13 +206,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8723464408503651864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fa4326d682116408e4eac7b02bff75, type: 3}
+  m_Script: {fileID: 11500000, guid: 9842afddad0662a42a83f925ac67218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_mouseSensitivity: 100
   target: {fileID: 8723464409441415241}
   player: {fileID: 8723464408901635459}
-  m_distance: 0
+  m_distance: 5
 --- !u!1 &8723464408901635458
 GameObject:
   m_ObjectHideFlags: 0
