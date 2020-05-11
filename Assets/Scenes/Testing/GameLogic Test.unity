@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.083333336
+  m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: de97aa5610b42a3449b9ac730ffbd9ee, type: 2}
 --- !u!4 &15096984
@@ -297,7 +297,7 @@ Transform:
   - {fileID: 242253912}
   - {fileID: 1269661343}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &15096985
 MonoBehaviour:
@@ -312,6 +312,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 15096983}
+  currency: 100
+  coreHealth: 100
+  currencyDisplay: {fileID: 0}
+  panel: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!1 &28840372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3472,7 @@ PrefabInstance:
     - target: {fileID: 1562688812226795768, guid: fa046e6b6a186434ba3674839947711e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1562688812226795768, guid: fa046e6b6a186434ba3674839947711e,
         type: 3}
