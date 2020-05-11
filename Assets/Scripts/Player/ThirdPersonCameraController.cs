@@ -23,6 +23,8 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab)) { m_distance = (m_distance == 5f) ? 0f : 5f; }
+
         mouseX = Input.GetAxis("Mouse X") * m_mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * m_mouseSensitivity * Time.deltaTime;
 

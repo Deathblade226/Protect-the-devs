@@ -11899,6 +11899,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4351658218009096355, guid: 31f57517dc1cd1a47954c1c24d139b7e,
+        type: 3}
+      propertyPath: m_mouseSensitivity
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 6049015500076582492, guid: 31f57517dc1cd1a47954c1c24d139b7e,
         type: 3}
       propertyPath: m_Layer
