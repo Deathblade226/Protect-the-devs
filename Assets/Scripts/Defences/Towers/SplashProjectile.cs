@@ -8,14 +8,22 @@ public class SplashProjectile : Projectile
 
     Vector3 direction;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag != "Monster")
+
+        if (other.gameObject.tag != "Monster")
         {
-            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>(), true);
+            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>(), true);
         }
         else
-        { 
+        {
+            if (Particles != null) { 
+            GameObject particles = Instantiate(Particles, transform.position, Quaternion.identity);
+            ParticleSystem ps = particles.GetComponent<ParticleSystem>();
+            ps.Play();
+            Destroy(particles.gameObject, 1.5f);
+            }
+
             Collider[] colliders = Physics.OverlapSphere(gameObject.transform.position, radius);
             foreach (Collider collider in colliders)
             {

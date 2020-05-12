@@ -11,7 +11,8 @@ public class DefenseTD : MonoBehaviour {
 [SerializeField] float damage = 0.0f;
 [SerializeField] DefenceAgro agro = null;
 [SerializeField] string enemyTag = "";
-
+[SerializeField] ParticleSystem particles = null;
+public ParticleSystem Particles { get => particles; set => particles = value; }
 public Damagable Fortitude { get => fortitude; set => fortitude = value; }
 public float Range { get => range; set => range = value; }
 public float Rate { get => rate; set => rate = value; }

@@ -331,12 +331,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fortitude: {fileID: 946609927642930607}
-  range: 50
+  range: 20
   rate: 5
   cost: 100
   damage: 50
   agro: {fileID: 946609927642930581}
   enemyTag: Monster
+  particles: {fileID: 0}
   projectile: {fileID: 7911045047872793202, guid: e6599ecdb6ffc724d8d1fe1e63e2ecd1,
     type: 3}
   barrel: {fileID: 5935365738073105808}

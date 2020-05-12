@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour {
 [SerializeField] float damage = 0f;
 [SerializeField] string enemyTag = "";
 [SerializeField] float LifeTime = 1.0f;
+[SerializeField] GameObject particles = null;
+public GameObject Particles { get => particles; set => particles = value; }
 public float WeaponDamage { get => damage; set => damage = value; }
 public string EnemyTag { get => enemyTag; set => enemyTag = value; }
 
