@@ -21,7 +21,9 @@ public class TimerTrap : TrapTD
                 }
             }
         }
+        else { 
         currentTimer = currentTimer - Time.deltaTime;
+        }
     }
 
     private void OnDrawGizmos()

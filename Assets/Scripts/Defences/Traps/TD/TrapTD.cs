@@ -6,8 +6,10 @@ public class TrapTD : DefenseTD {
 
 //Area for trap to trigger. The base rage is the aoe that i can do damage. Larger then this`.
 [SerializeField] float triggerRange = 0.0f;
+[SerializeField] ParticleSystem particles = null;
 
 public float TriggerRange { get => triggerRange; set => triggerRange = value; }
+public ParticleSystem Particles { get => particles; set => particles = value; }
 protected float ResetTime { get; set; }
 
 private void OnDrawGizmos() {
