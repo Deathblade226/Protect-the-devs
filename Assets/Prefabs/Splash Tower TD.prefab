@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b8f337fc2f0034f95e485b0d9f5283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: Bomb Tower
   fortitude: {fileID: 946609927642930607}
   range: 20
   rate: 5

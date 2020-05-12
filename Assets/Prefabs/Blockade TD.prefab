@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d10ad2f17fc7a2429bad79be7192408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: Blockade
   fortitude: {fileID: 6453215007824603043}
   range: 1.75
   rate: 0

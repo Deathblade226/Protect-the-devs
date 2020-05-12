@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b8f337fc2f0034f95e485b0d9f5283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: Rapid Fire Tower
   fortitude: {fileID: 5744635610203938909}
   range: 20
   rate: 0.25

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DefenseTD : MonoBehaviour {
 
+[SerializeField] string towerName ;
 [SerializeField] Damagable fortitude = null;
 [SerializeField] float range = 1.0f;
 [SerializeField] float rate = 1.0f;
@@ -22,4 +23,5 @@ public DefenceAgro Agro { get => agro; set => agro = value; }
 public string EnemyTag { get => enemyTag; set => enemyTag = value; }
 public float WaitTime { get; set; }
 public bool Placed { get; set; } = false;
+public string TowerName { get => towerName; set => towerName = value; }
 }

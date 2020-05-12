@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlacementController : MonoBehaviour {
 
 [SerializeField] Camera PlayerCam = null;
 [SerializeField] Camera BuildCam = null;
+[SerializeField] Text TowerDisplay = null;
 [SerializeField] List<GameObject> placeableObjects = new List<GameObject>();
 
 private GameObject currentObject = null;
@@ -15,6 +17,12 @@ private int currentTower = -1;
 
 private void Update() {
     CreatePlacable();
+    
+    if (TowerDisplay != null) { 
+    string display = "Tower: ";   
+    display += (currentObject != null) ? currentObject.GetComponent<DefenseTD>().TowerName : "None";
+    TowerDisplay.text = display;
+    }
 
     if (!Game.game.Paused) Cursor.lockState = (BuildCam.gameObject.activeSelf) ? CursorLockMode.None : CursorLockMode.Locked;
 
