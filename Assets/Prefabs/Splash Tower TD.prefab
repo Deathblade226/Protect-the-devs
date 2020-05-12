@@ -172,7 +172,6 @@ GameObject:
   - component: {fileID: 946609927642930607}
   - component: {fileID: 415911047750837462}
   - component: {fileID: 2894489371586957476}
-  - component: {fileID: 1939224546470224802}
   m_Layer: 2
   m_Name: Splash Tower TD
   m_TagString: Defence
@@ -333,7 +332,7 @@ MonoBehaviour:
   fortitude: {fileID: 946609927642930607}
   range: 20
   rate: 5
-  cost: 100
+  cost: 75
   damage: 50
   agro: {fileID: 946609927642930581}
   enemyTag: Monster
@@ -343,19 +342,6 @@ MonoBehaviour:
   barrel: {fileID: 5935365738073105808}
   shotSpeed: 100
   visionCheck: {fileID: 3135359744295546365}
---- !u!114 &1939224546470224802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5935365739001223489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 693184f6711d19c4bbb197c0e1a46007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 100
 --- !u!1 &5935365739550011885
 GameObject:
   m_ObjectHideFlags: 0

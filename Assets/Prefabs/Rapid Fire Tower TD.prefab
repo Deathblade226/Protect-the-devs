@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 5744635610203938909}
   - component: {fileID: 5143005173611321636}
   - component: {fileID: 7688007057010961750}
-  - component: {fileID: 6373580161074552400}
   m_Layer: 2
   m_Name: Rapid Fire Tower TD
   m_TagString: Defence
@@ -307,24 +306,12 @@ MonoBehaviour:
   damage: 10
   agro: {fileID: 5744635610203938919}
   enemyTag: Monster
+  particles: {fileID: 0}
   projectile: {fileID: 379734771092920093, guid: 93e618b24dbf71945b67355f36da2f33,
     type: 3}
   barrel: {fileID: 1208271611667355746}
   shotSpeed: 50
   visionCheck: {fileID: 7573095257635262479}
---- !u!114 &6373580161074552400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208271612603868339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 693184f6711d19c4bbb197c0e1a46007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 100
 --- !u!1 &1208271613144255519
 GameObject:
   m_ObjectHideFlags: 0

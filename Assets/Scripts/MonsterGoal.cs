@@ -9,8 +9,14 @@ public class MonsterGoal : MonoBehaviour {
 [SerializeField] string monster = "Monster";
 void Update() {
     GameObject[] gameObjects = AIUtilities.GetGameObjects(gameObject, monster, range);
-    if (gameObjects != null) { 
-    gameObjects.ToList().ForEach(go => Destroy(go));;
+    if (gameObjects.Length > 0) {
+
+    foreach(GameObject monster in gameObjects) {
+    TravelNav tn = monster.GetComponent<TravelNav>();
+    Game.game.CoreHealth -= tn.Value;
+    Destroy(monster);
+    }
+
     }
 }
 

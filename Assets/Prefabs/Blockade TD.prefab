@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7229723273551935034}
   - component: {fileID: 7137638815372366700}
   - component: {fileID: 6453215007824603043}
-  - component: {fileID: 2164338238060665610}
   - component: {fileID: 1210420011230241468}
   m_Layer: 2
   m_Name: Blockade TD
@@ -95,19 +94,6 @@ MonoBehaviour:
   m_damage: {fileID: 0}
   m_damageReduction: 0.1
   score: 0
---- !u!114 &2164338238060665610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7229723273551935039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 693184f6711d19c4bbb197c0e1a46007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 20
 --- !u!114 &1210420011230241468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +113,7 @@ MonoBehaviour:
   damage: 0
   agro: {fileID: 7229723273551935034}
   enemyTag: Monster
+  particles: {fileID: 0}
 --- !u!1 &7229723274715410647
 GameObject:
   m_ObjectHideFlags: 0

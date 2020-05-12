@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 75
+  destroyOnHit: 0
   Type: Weapon
   projectile: {fileID: 162032591189475313, guid: 2f4570dd6ef2d9b4b9d69a739441d2e2,
     type: 3}
@@ -346,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Objective
   nc: {fileID: 7890010502170072632}
+  value: 10
 --- !u!114 &7890010502170072637
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
+  destroyOnHit: 0
   Type: Weapon
 --- !u!1 &4870565755097192134
 GameObject:
@@ -374,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Objective
   nc: {fileID: 7890010502170072632}
+  value: 5
 --- !u!114 &7890010502170072637
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Objective
   nc: {fileID: 7890010502170072632}
+  value: 1
 --- !u!114 &7890010502170072637
 MonoBehaviour:
   m_ObjectHideFlags: 0
