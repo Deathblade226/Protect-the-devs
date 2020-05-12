@@ -20,7 +20,7 @@ private void Update() {
     
     if (TowerDisplay != null) { 
     string display = "Tower: ";   
-    display += (currentObject != null) ? currentObject.GetComponent<DefenseTD>().TowerName : "None";
+    display += (currentObject != null) ? $"{currentObject.GetComponent<DefenseTD>().TowerName} \nCost: {currentObject.GetComponent<DefenseTD>().Cost}" : "None";
     TowerDisplay.text = display;
     }
 
