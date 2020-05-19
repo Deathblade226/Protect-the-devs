@@ -19,14 +19,16 @@ void Start() {
     travelNav.Nc = this;
     navPath = new NavMeshPath();
     objective = AIUtilities.GetNearestGameObject(gameObject, travelNav.TargetTag, xray:true);
+    StartCoroutine(MonsterLogic());
+}
+private void Update() {
+    if (Animator != null) Animator.SetFloat("Speed", Agent.velocity.magnitude);        
 }
 
-void Update() { //I need to refine this to increase preformance
-    if (Animator != null) Animator.SetFloat("Speed", Agent.velocity.magnitude);
-
+IEnumerator MonsterLogic() { 
     if (attackNav.Target != "" && !attackNav.Active) { travelNav.Moving = false; wanderNav.StopWander(); attackNav.StartAttacking(); 
     } else if (objective != null && !travelNav.Moving && !attackNav.Active) { wanderNav.StopWander(); travelNav.StartTravel();  
     } else if (!wanderNav.Active && !travelNav.Moving && !attackNav.Active) wanderNav.StartWander(); travelNav.Moving = false;
-}
+yield return null; }
 
 }

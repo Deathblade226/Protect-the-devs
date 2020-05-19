@@ -3430,6 +3430,85 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &524221943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524221944}
+  - component: {fileID: 524221946}
+  - component: {fileID: 524221945}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &524221944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524221943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2084770654}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 525, y: 40}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &524221945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524221943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Movement: WASD\t\t\tDefences: 1-5\t\t\tToggle View: Tab\t\t\tMap: M\nBuild
+    view: T\t\t\tPause: Esc\t\t\tRotate Defences: Scroll wheel"
+--- !u!222 &524221946
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524221943}
+  m_CullTransparentMesh: 0
 --- !u!1 &525563921
 GameObject:
   m_ObjectHideFlags: 0
@@ -12402,6 +12481,7 @@ RectTransform:
   - {fileID: 236951901}
   - {fileID: 541939281}
   - {fileID: 1714098723}
+  - {fileID: 524221944}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12723,6 +12803,11 @@ PrefabInstance:
       propertyPath: m_mouseSensitivity
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 4351658218009096355, guid: 31f57517dc1cd1a47954c1c24d139b7e,
+        type: 3}
+      propertyPath: m_distance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6049015500076582492, guid: 31f57517dc1cd1a47954c1c24d139b7e,
         type: 3}
       propertyPath: m_Layer
@@ -12732,6 +12817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341156807160670910, guid: 31f57517dc1cd1a47954c1c24d139b7e,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 3383
       objectReference: {fileID: 0}
     - target: {fileID: 8723464408218163511, guid: 31f57517dc1cd1a47954c1c24d139b7e,
         type: 3}

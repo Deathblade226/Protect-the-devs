@@ -17,12 +17,12 @@ public bool Attacking { get => attacking; }
 
 private float AttackTime = 0;
 private bool attacking = false;
+private GameObject tower = null;
 
 private void Start() {
 	weapon.attack = this;
 }
 private void Update() {
-	GameObject tower = null;
 	if (lookForTowers) tower = AIUtilities.GetNearestGameObject(gameObject, "Defence", attackRange);
 
 	if (tower != null) { Target = tower.tag; Active = true; }
@@ -47,8 +47,8 @@ private void Update() {
 
 	else { Nc.Animator.SetTrigger("StopAttack"); Nc.Agent.SetDestination(target.transform.position); Nc.Agent.isStopped = false; AttackTime -= Time.deltaTime; }
 
-	}        
 	}
+	}        
 }
 
 public void StartAttacking() { 
